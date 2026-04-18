@@ -1,0 +1,422 @@
+Simulator report for PC_reg
+Sun Nov 12 19:51:51 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 186 nodes    ;
+; Simulation Coverage         ;      48.35 % ;
+; Total Number of Transitions ; 3427         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      48.35 % ;
+; Total nodes checked                                 ; 186          ;
+; Total output ports checked                          ; 182          ;
+; Total output ports with complete 1/0-value coverage ; 88           ;
+; Total output ports with no 1/0-value coverage       ; 77           ;
+; Total output ports with no 1-value coverage         ; 85           ;
+; Total output ports with no 0-value coverage         ; 86           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                        ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |PC_reg|regPCLATH[0]~0 ; |PC_reg|regPCLATH[0]~0 ; out              ;
+; |PC_reg|regPC~33       ; |PC_reg|regPC~33       ; out              ;
+; |PC_reg|regPC~34       ; |PC_reg|regPC~34       ; out              ;
+; |PC_reg|regPC~35       ; |PC_reg|regPC~35       ; out              ;
+; |PC_reg|regPC~36       ; |PC_reg|regPC~36       ; out              ;
+; |PC_reg|regPC~37       ; |PC_reg|regPC~37       ; out              ;
+; |PC_reg|regPC~38       ; |PC_reg|regPC~38       ; out              ;
+; |PC_reg|regPC~39       ; |PC_reg|regPC~39       ; out              ;
+; |PC_reg|regPCLATH~10   ; |PC_reg|regPCLATH~10   ; out              ;
+; |PC_reg|regPCLATH~11   ; |PC_reg|regPCLATH~11   ; out              ;
+; |PC_reg|regPCLATH~12   ; |PC_reg|regPCLATH~12   ; out              ;
+; |PC_reg|regPCLATH~13   ; |PC_reg|regPCLATH~13   ; out              ;
+; |PC_reg|regPCLATH~14   ; |PC_reg|regPCLATH~14   ; out              ;
+; |PC_reg|regPCLATH~15   ; |PC_reg|regPCLATH~15   ; out              ;
+; |PC_reg|regPCLATH~18   ; |PC_reg|regPCLATH~18   ; out              ;
+; |PC_reg|regPCLATH~19   ; |PC_reg|regPCLATH~19   ; out              ;
+; |PC_reg|regPCLATH~20   ; |PC_reg|regPCLATH~20   ; out              ;
+; |PC_reg|regPCLATH~21   ; |PC_reg|regPCLATH~21   ; out              ;
+; |PC_reg|regPCLATH~22   ; |PC_reg|regPCLATH~22   ; out              ;
+; |PC_reg|regPCLATH~23   ; |PC_reg|regPCLATH~23   ; out              ;
+; |PC_reg|regPC[5]~7     ; |PC_reg|regPC[5]~7     ; out              ;
+; |PC_reg|regPC[4]~8     ; |PC_reg|regPC[4]~8     ; out              ;
+; |PC_reg|regPC[3]~9     ; |PC_reg|regPC[3]~9     ; out              ;
+; |PC_reg|regPC[2]~10    ; |PC_reg|regPC[2]~10    ; out              ;
+; |PC_reg|regPC[1]~11    ; |PC_reg|regPC[1]~11    ; out              ;
+; |PC_reg|regPC[5]       ; |PC_reg|regPC[5]       ; regout           ;
+; |PC_reg|regPC[4]       ; |PC_reg|regPC[4]       ; regout           ;
+; |PC_reg|regPC[3]       ; |PC_reg|regPC[3]       ; regout           ;
+; |PC_reg|regPC[2]       ; |PC_reg|regPC[2]       ; regout           ;
+; |PC_reg|regPC[1]       ; |PC_reg|regPC[1]       ; regout           ;
+; |PC_reg|regPC[0]~12    ; |PC_reg|regPC[0]~12    ; out              ;
+; |PC_reg|regPCLATH[2]~6 ; |PC_reg|regPCLATH[2]~6 ; out              ;
+; |PC_reg|regPCLATH[1]~7 ; |PC_reg|regPCLATH[1]~7 ; out              ;
+; |PC_reg|regPC[0]       ; |PC_reg|regPC[0]       ; regout           ;
+; |PC_reg|regPC[5]~20    ; |PC_reg|regPC[5]~20    ; out              ;
+; |PC_reg|regPC[4]~21    ; |PC_reg|regPC[4]~21    ; out              ;
+; |PC_reg|regPC[3]~22    ; |PC_reg|regPC[3]~22    ; out              ;
+; |PC_reg|regPC[2]~23    ; |PC_reg|regPC[2]~23    ; out              ;
+; |PC_reg|regPC[1]~24    ; |PC_reg|regPC[1]~24    ; out              ;
+; |PC_reg|regPC[0]~26    ; |PC_reg|regPC[0]~26    ; out              ;
+; |PC_reg|dbus_out[7]~1  ; |PC_reg|dbus_out[7]~1  ; out0             ;
+; |PC_reg|dbus_out[4]~7  ; |PC_reg|dbus_out[4]~7  ; out              ;
+; |PC_reg|dbus_out[4]~8  ; |PC_reg|dbus_out[4]~8  ; out              ;
+; |PC_reg|dbus_out[2]~11 ; |PC_reg|dbus_out[2]~11 ; out              ;
+; |PC_reg|dbus_out[2]~12 ; |PC_reg|dbus_out[2]~12 ; out              ;
+; |PC_reg|dbus_out[1]~13 ; |PC_reg|dbus_out[1]~13 ; out              ;
+; |PC_reg|dbus_out[1]~14 ; |PC_reg|dbus_out[1]~14 ; out              ;
+; |PC_reg|dbus_out[0]~15 ; |PC_reg|dbus_out[0]~15 ; out              ;
+; |PC_reg|dbus_out[0]~16 ; |PC_reg|dbus_out[0]~16 ; out              ;
+; |PC_reg|process_0~0    ; |PC_reg|process_0~0    ; out0             ;
+; |PC_reg|process_0~1    ; |PC_reg|process_0~1    ; out0             ;
+; |PC_reg|clk_in         ; |PC_reg|clk_in         ; out              ;
+; |PC_reg|addr_in[0]     ; |PC_reg|addr_in[0]     ; out              ;
+; |PC_reg|addr_in[1]     ; |PC_reg|addr_in[1]     ; out              ;
+; |PC_reg|addr_in[2]     ; |PC_reg|addr_in[2]     ; out              ;
+; |PC_reg|addr_in[3]     ; |PC_reg|addr_in[3]     ; out              ;
+; |PC_reg|addr_in[4]     ; |PC_reg|addr_in[4]     ; out              ;
+; |PC_reg|addr_in[5]     ; |PC_reg|addr_in[5]     ; out              ;
+; |PC_reg|abus_in[3]     ; |PC_reg|abus_in[3]     ; out              ;
+; |PC_reg|dbus_in[0]     ; |PC_reg|dbus_in[0]     ; out              ;
+; |PC_reg|dbus_in[1]     ; |PC_reg|dbus_in[1]     ; out              ;
+; |PC_reg|dbus_in[2]     ; |PC_reg|dbus_in[2]     ; out              ;
+; |PC_reg|dbus_in[3]     ; |PC_reg|dbus_in[3]     ; out              ;
+; |PC_reg|dbus_in[4]     ; |PC_reg|dbus_in[4]     ; out              ;
+; |PC_reg|wr_en          ; |PC_reg|wr_en          ; out              ;
+; |PC_reg|rd_en          ; |PC_reg|rd_en          ; out              ;
+; |PC_reg|nextpc_out[0]  ; |PC_reg|nextpc_out[0]  ; pin_out          ;
+; |PC_reg|nextpc_out[1]  ; |PC_reg|nextpc_out[1]  ; pin_out          ;
+; |PC_reg|nextpc_out[2]  ; |PC_reg|nextpc_out[2]  ; pin_out          ;
+; |PC_reg|nextpc_out[3]  ; |PC_reg|nextpc_out[3]  ; pin_out          ;
+; |PC_reg|nextpc_out[4]  ; |PC_reg|nextpc_out[4]  ; pin_out          ;
+; |PC_reg|nextpc_out[5]  ; |PC_reg|nextpc_out[5]  ; pin_out          ;
+; |PC_reg|dbus_out[0]    ; |PC_reg|dbus_out[0]    ; pin_out          ;
+; |PC_reg|dbus_out[1]    ; |PC_reg|dbus_out[1]    ; pin_out          ;
+; |PC_reg|dbus_out[2]    ; |PC_reg|dbus_out[2]    ; pin_out          ;
+; |PC_reg|dbus_out[4]    ; |PC_reg|dbus_out[4]    ; pin_out          ;
+; |PC_reg|Add0~0         ; |PC_reg|Add0~0         ; out0             ;
+; |PC_reg|Add0~1         ; |PC_reg|Add0~1         ; out0             ;
+; |PC_reg|Add0~2         ; |PC_reg|Add0~2         ; out0             ;
+; |PC_reg|Add0~3         ; |PC_reg|Add0~3         ; out0             ;
+; |PC_reg|Add0~4         ; |PC_reg|Add0~4         ; out0             ;
+; |PC_reg|Add0~5         ; |PC_reg|Add0~5         ; out0             ;
+; |PC_reg|Add0~6         ; |PC_reg|Add0~6         ; out0             ;
+; |PC_reg|Add0~7         ; |PC_reg|Add0~7         ; out0             ;
+; |PC_reg|Add0~8         ; |PC_reg|Add0~8         ; out0             ;
+; |PC_reg|Add0~9         ; |PC_reg|Add0~9         ; out0             ;
+; |PC_reg|Equal0~0       ; |PC_reg|Equal0~0       ; out0             ;
+; |PC_reg|Equal1~0       ; |PC_reg|Equal1~0       ; out0             ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------+
+; Missing 1-Value Coverage                                           ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |PC_reg|regPC~27       ; |PC_reg|regPC~27       ; out              ;
+; |PC_reg|regPC~28       ; |PC_reg|regPC~28       ; out              ;
+; |PC_reg|regPC~29       ; |PC_reg|regPC~29       ; out              ;
+; |PC_reg|regPC~30       ; |PC_reg|regPC~30       ; out              ;
+; |PC_reg|regPC~31       ; |PC_reg|regPC~31       ; out              ;
+; |PC_reg|regPC~32       ; |PC_reg|regPC~32       ; out              ;
+; |PC_reg|regPCLATH~8    ; |PC_reg|regPCLATH~8    ; out              ;
+; |PC_reg|regPCLATH~9    ; |PC_reg|regPCLATH~9    ; out              ;
+; |PC_reg|regPCLATH~16   ; |PC_reg|regPCLATH~16   ; out              ;
+; |PC_reg|regPCLATH~17   ; |PC_reg|regPCLATH~17   ; out              ;
+; |PC_reg|regPC[12]~0    ; |PC_reg|regPC[12]~0    ; out              ;
+; |PC_reg|regPC[11]~1    ; |PC_reg|regPC[11]~1    ; out              ;
+; |PC_reg|regPC[10]~2    ; |PC_reg|regPC[10]~2    ; out              ;
+; |PC_reg|regPC[9]~3     ; |PC_reg|regPC[9]~3     ; out              ;
+; |PC_reg|regPC[8]~4     ; |PC_reg|regPC[8]~4     ; out              ;
+; |PC_reg|regPC[7]~5     ; |PC_reg|regPC[7]~5     ; out              ;
+; |PC_reg|regPC[12]      ; |PC_reg|regPC[12]      ; regout           ;
+; |PC_reg|regPC[11]      ; |PC_reg|regPC[11]      ; regout           ;
+; |PC_reg|regPC[10]      ; |PC_reg|regPC[10]      ; regout           ;
+; |PC_reg|regPC[9]       ; |PC_reg|regPC[9]       ; regout           ;
+; |PC_reg|regPC[8]       ; |PC_reg|regPC[8]       ; regout           ;
+; |PC_reg|regPC[7]       ; |PC_reg|regPC[7]       ; regout           ;
+; |PC_reg|regPCLATH[7]~1 ; |PC_reg|regPCLATH[7]~1 ; out              ;
+; |PC_reg|regPCLATH[6]~2 ; |PC_reg|regPCLATH[6]~2 ; out              ;
+; |PC_reg|regPCLATH[5]~3 ; |PC_reg|regPCLATH[5]~3 ; out              ;
+; |PC_reg|regPCLATH[4]~4 ; |PC_reg|regPCLATH[4]~4 ; out              ;
+; |PC_reg|regPCLATH[3]~5 ; |PC_reg|regPCLATH[3]~5 ; out              ;
+; |PC_reg|regPCLATH[7]   ; |PC_reg|regPCLATH[7]   ; regout           ;
+; |PC_reg|regPCLATH[6]   ; |PC_reg|regPCLATH[6]   ; regout           ;
+; |PC_reg|regPCLATH[5]   ; |PC_reg|regPCLATH[5]   ; regout           ;
+; |PC_reg|regPCLATH[4]   ; |PC_reg|regPCLATH[4]   ; regout           ;
+; |PC_reg|regPCLATH[3]   ; |PC_reg|regPCLATH[3]   ; regout           ;
+; |PC_reg|regPCLATH[2]   ; |PC_reg|regPCLATH[2]   ; regout           ;
+; |PC_reg|regPCLATH[1]   ; |PC_reg|regPCLATH[1]   ; regout           ;
+; |PC_reg|regPC[12]~13   ; |PC_reg|regPC[12]~13   ; out              ;
+; |PC_reg|regPC[11]~14   ; |PC_reg|regPC[11]~14   ; out              ;
+; |PC_reg|regPC[10]~15   ; |PC_reg|regPC[10]~15   ; out              ;
+; |PC_reg|regPC[9]~16    ; |PC_reg|regPC[9]~16    ; out              ;
+; |PC_reg|regPC[8]~17    ; |PC_reg|regPC[8]~17    ; out              ;
+; |PC_reg|regPC[7]~18    ; |PC_reg|regPC[7]~18    ; out              ;
+; |PC_reg|dbus_out[7]~0  ; |PC_reg|dbus_out[7]~0  ; out              ;
+; |PC_reg|dbus_out[7]~2  ; |PC_reg|dbus_out[7]~2  ; out              ;
+; |PC_reg|dbus_out[6]~3  ; |PC_reg|dbus_out[6]~3  ; out              ;
+; |PC_reg|dbus_out[6]~4  ; |PC_reg|dbus_out[6]~4  ; out              ;
+; |PC_reg|dbus_out[5]~5  ; |PC_reg|dbus_out[5]~5  ; out              ;
+; |PC_reg|dbus_out[5]~6  ; |PC_reg|dbus_out[5]~6  ; out              ;
+; |PC_reg|dbus_out[3]~9  ; |PC_reg|dbus_out[3]~9  ; out              ;
+; |PC_reg|dbus_out[3]~10 ; |PC_reg|dbus_out[3]~10 ; out              ;
+; |PC_reg|regPCLATH[0]   ; |PC_reg|regPCLATH[0]   ; regout           ;
+; |PC_reg|addr_in[7]     ; |PC_reg|addr_in[7]     ; out              ;
+; |PC_reg|addr_in[8]     ; |PC_reg|addr_in[8]     ; out              ;
+; |PC_reg|addr_in[9]     ; |PC_reg|addr_in[9]     ; out              ;
+; |PC_reg|addr_in[10]    ; |PC_reg|addr_in[10]    ; out              ;
+; |PC_reg|abus_in[0]     ; |PC_reg|abus_in[0]     ; out              ;
+; |PC_reg|abus_in[1]     ; |PC_reg|abus_in[1]     ; out              ;
+; |PC_reg|abus_in[2]     ; |PC_reg|abus_in[2]     ; out              ;
+; |PC_reg|abus_in[4]     ; |PC_reg|abus_in[4]     ; out              ;
+; |PC_reg|abus_in[5]     ; |PC_reg|abus_in[5]     ; out              ;
+; |PC_reg|abus_in[6]     ; |PC_reg|abus_in[6]     ; out              ;
+; |PC_reg|dbus_in[6]     ; |PC_reg|dbus_in[6]     ; out              ;
+; |PC_reg|dbus_in[7]     ; |PC_reg|dbus_in[7]     ; out              ;
+; |PC_reg|inc_pc         ; |PC_reg|inc_pc         ; out              ;
+; |PC_reg|load_pc        ; |PC_reg|load_pc        ; out              ;
+; |PC_reg|nextpc_out[7]  ; |PC_reg|nextpc_out[7]  ; pin_out          ;
+; |PC_reg|nextpc_out[8]  ; |PC_reg|nextpc_out[8]  ; pin_out          ;
+; |PC_reg|nextpc_out[9]  ; |PC_reg|nextpc_out[9]  ; pin_out          ;
+; |PC_reg|nextpc_out[10] ; |PC_reg|nextpc_out[10] ; pin_out          ;
+; |PC_reg|nextpc_out[11] ; |PC_reg|nextpc_out[11] ; pin_out          ;
+; |PC_reg|nextpc_out[12] ; |PC_reg|nextpc_out[12] ; pin_out          ;
+; |PC_reg|dbus_out[3]    ; |PC_reg|dbus_out[3]    ; pin_out          ;
+; |PC_reg|dbus_out[5]    ; |PC_reg|dbus_out[5]    ; pin_out          ;
+; |PC_reg|dbus_out[6]    ; |PC_reg|dbus_out[6]    ; pin_out          ;
+; |PC_reg|dbus_out[7]    ; |PC_reg|dbus_out[7]    ; pin_out          ;
+; |PC_reg|Add0~11        ; |PC_reg|Add0~11        ; out0             ;
+; |PC_reg|Add0~12        ; |PC_reg|Add0~12        ; out0             ;
+; |PC_reg|Add0~13        ; |PC_reg|Add0~13        ; out0             ;
+; |PC_reg|Add0~14        ; |PC_reg|Add0~14        ; out0             ;
+; |PC_reg|Add0~15        ; |PC_reg|Add0~15        ; out0             ;
+; |PC_reg|Add0~16        ; |PC_reg|Add0~16        ; out0             ;
+; |PC_reg|Add0~17        ; |PC_reg|Add0~17        ; out0             ;
+; |PC_reg|Add0~18        ; |PC_reg|Add0~18        ; out0             ;
+; |PC_reg|Add0~19        ; |PC_reg|Add0~19        ; out0             ;
+; |PC_reg|Add0~20        ; |PC_reg|Add0~20        ; out0             ;
+; |PC_reg|Add0~21        ; |PC_reg|Add0~21        ; out0             ;
+; |PC_reg|Add0~22        ; |PC_reg|Add0~22        ; out0             ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------+
+; Missing 0-Value Coverage                                           ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |PC_reg|regPC~27       ; |PC_reg|regPC~27       ; out              ;
+; |PC_reg|regPC~28       ; |PC_reg|regPC~28       ; out              ;
+; |PC_reg|regPC~29       ; |PC_reg|regPC~29       ; out              ;
+; |PC_reg|regPC~30       ; |PC_reg|regPC~30       ; out              ;
+; |PC_reg|regPC~31       ; |PC_reg|regPC~31       ; out              ;
+; |PC_reg|regPC~32       ; |PC_reg|regPC~32       ; out              ;
+; |PC_reg|regPCLATH~8    ; |PC_reg|regPCLATH~8    ; out              ;
+; |PC_reg|regPCLATH~9    ; |PC_reg|regPCLATH~9    ; out              ;
+; |PC_reg|regPCLATH~16   ; |PC_reg|regPCLATH~16   ; out              ;
+; |PC_reg|regPCLATH~17   ; |PC_reg|regPCLATH~17   ; out              ;
+; |PC_reg|regPC[12]~0    ; |PC_reg|regPC[12]~0    ; out              ;
+; |PC_reg|regPC[11]~1    ; |PC_reg|regPC[11]~1    ; out              ;
+; |PC_reg|regPC[10]~2    ; |PC_reg|regPC[10]~2    ; out              ;
+; |PC_reg|regPC[9]~3     ; |PC_reg|regPC[9]~3     ; out              ;
+; |PC_reg|regPC[8]~4     ; |PC_reg|regPC[8]~4     ; out              ;
+; |PC_reg|regPC[7]~5     ; |PC_reg|regPC[7]~5     ; out              ;
+; |PC_reg|regPC[6]~6     ; |PC_reg|regPC[6]~6     ; out              ;
+; |PC_reg|regPC[12]      ; |PC_reg|regPC[12]      ; regout           ;
+; |PC_reg|regPC[11]      ; |PC_reg|regPC[11]      ; regout           ;
+; |PC_reg|regPC[10]      ; |PC_reg|regPC[10]      ; regout           ;
+; |PC_reg|regPC[9]       ; |PC_reg|regPC[9]       ; regout           ;
+; |PC_reg|regPC[8]       ; |PC_reg|regPC[8]       ; regout           ;
+; |PC_reg|regPC[7]       ; |PC_reg|regPC[7]       ; regout           ;
+; |PC_reg|regPC[6]       ; |PC_reg|regPC[6]       ; regout           ;
+; |PC_reg|regPCLATH[7]~1 ; |PC_reg|regPCLATH[7]~1 ; out              ;
+; |PC_reg|regPCLATH[6]~2 ; |PC_reg|regPCLATH[6]~2 ; out              ;
+; |PC_reg|regPCLATH[5]~3 ; |PC_reg|regPCLATH[5]~3 ; out              ;
+; |PC_reg|regPCLATH[4]~4 ; |PC_reg|regPCLATH[4]~4 ; out              ;
+; |PC_reg|regPCLATH[3]~5 ; |PC_reg|regPCLATH[3]~5 ; out              ;
+; |PC_reg|regPCLATH[7]   ; |PC_reg|regPCLATH[7]   ; regout           ;
+; |PC_reg|regPCLATH[6]   ; |PC_reg|regPCLATH[6]   ; regout           ;
+; |PC_reg|regPCLATH[5]   ; |PC_reg|regPCLATH[5]   ; regout           ;
+; |PC_reg|regPCLATH[4]   ; |PC_reg|regPCLATH[4]   ; regout           ;
+; |PC_reg|regPCLATH[3]   ; |PC_reg|regPCLATH[3]   ; regout           ;
+; |PC_reg|regPCLATH[2]   ; |PC_reg|regPCLATH[2]   ; regout           ;
+; |PC_reg|regPCLATH[1]   ; |PC_reg|regPCLATH[1]   ; regout           ;
+; |PC_reg|regPC[12]~13   ; |PC_reg|regPC[12]~13   ; out              ;
+; |PC_reg|regPC[11]~14   ; |PC_reg|regPC[11]~14   ; out              ;
+; |PC_reg|regPC[10]~15   ; |PC_reg|regPC[10]~15   ; out              ;
+; |PC_reg|regPC[9]~16    ; |PC_reg|regPC[9]~16    ; out              ;
+; |PC_reg|regPC[8]~17    ; |PC_reg|regPC[8]~17    ; out              ;
+; |PC_reg|regPC[7]~18    ; |PC_reg|regPC[7]~18    ; out              ;
+; |PC_reg|regPC[6]~19    ; |PC_reg|regPC[6]~19    ; out              ;
+; |PC_reg|regPC[12]~25   ; |PC_reg|regPC[12]~25   ; out0             ;
+; |PC_reg|dbus_out[7]~2  ; |PC_reg|dbus_out[7]~2  ; out              ;
+; |PC_reg|dbus_out[6]~4  ; |PC_reg|dbus_out[6]~4  ; out              ;
+; |PC_reg|dbus_out[5]~6  ; |PC_reg|dbus_out[5]~6  ; out              ;
+; |PC_reg|dbus_out[3]~10 ; |PC_reg|dbus_out[3]~10 ; out              ;
+; |PC_reg|regPCLATH[0]   ; |PC_reg|regPCLATH[0]   ; regout           ;
+; |PC_reg|nrst           ; |PC_reg|nrst           ; out              ;
+; |PC_reg|addr_in[6]     ; |PC_reg|addr_in[6]     ; out              ;
+; |PC_reg|addr_in[7]     ; |PC_reg|addr_in[7]     ; out              ;
+; |PC_reg|addr_in[8]     ; |PC_reg|addr_in[8]     ; out              ;
+; |PC_reg|addr_in[9]     ; |PC_reg|addr_in[9]     ; out              ;
+; |PC_reg|addr_in[10]    ; |PC_reg|addr_in[10]    ; out              ;
+; |PC_reg|abus_in[0]     ; |PC_reg|abus_in[0]     ; out              ;
+; |PC_reg|abus_in[1]     ; |PC_reg|abus_in[1]     ; out              ;
+; |PC_reg|abus_in[2]     ; |PC_reg|abus_in[2]     ; out              ;
+; |PC_reg|abus_in[4]     ; |PC_reg|abus_in[4]     ; out              ;
+; |PC_reg|abus_in[5]     ; |PC_reg|abus_in[5]     ; out              ;
+; |PC_reg|abus_in[6]     ; |PC_reg|abus_in[6]     ; out              ;
+; |PC_reg|dbus_in[5]     ; |PC_reg|dbus_in[5]     ; out              ;
+; |PC_reg|dbus_in[6]     ; |PC_reg|dbus_in[6]     ; out              ;
+; |PC_reg|dbus_in[7]     ; |PC_reg|dbus_in[7]     ; out              ;
+; |PC_reg|inc_pc         ; |PC_reg|inc_pc         ; out              ;
+; |PC_reg|load_pc        ; |PC_reg|load_pc        ; out              ;
+; |PC_reg|nextpc_out[6]  ; |PC_reg|nextpc_out[6]  ; pin_out          ;
+; |PC_reg|nextpc_out[7]  ; |PC_reg|nextpc_out[7]  ; pin_out          ;
+; |PC_reg|nextpc_out[8]  ; |PC_reg|nextpc_out[8]  ; pin_out          ;
+; |PC_reg|nextpc_out[9]  ; |PC_reg|nextpc_out[9]  ; pin_out          ;
+; |PC_reg|nextpc_out[10] ; |PC_reg|nextpc_out[10] ; pin_out          ;
+; |PC_reg|nextpc_out[11] ; |PC_reg|nextpc_out[11] ; pin_out          ;
+; |PC_reg|nextpc_out[12] ; |PC_reg|nextpc_out[12] ; pin_out          ;
+; |PC_reg|Add0~10        ; |PC_reg|Add0~10        ; out0             ;
+; |PC_reg|Add0~11        ; |PC_reg|Add0~11        ; out0             ;
+; |PC_reg|Add0~12        ; |PC_reg|Add0~12        ; out0             ;
+; |PC_reg|Add0~13        ; |PC_reg|Add0~13        ; out0             ;
+; |PC_reg|Add0~14        ; |PC_reg|Add0~14        ; out0             ;
+; |PC_reg|Add0~15        ; |PC_reg|Add0~15        ; out0             ;
+; |PC_reg|Add0~16        ; |PC_reg|Add0~16        ; out0             ;
+; |PC_reg|Add0~17        ; |PC_reg|Add0~17        ; out0             ;
+; |PC_reg|Add0~18        ; |PC_reg|Add0~18        ; out0             ;
+; |PC_reg|Add0~19        ; |PC_reg|Add0~19        ; out0             ;
+; |PC_reg|Add0~20        ; |PC_reg|Add0~20        ; out0             ;
+; |PC_reg|Add0~21        ; |PC_reg|Add0~21        ; out0             ;
+; |PC_reg|Add0~22        ; |PC_reg|Add0~22        ; out0             ;
++------------------------+------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Nov 12 19:51:51 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off PC_reg -c PC_reg
+Info: Using vector source file "C:/Users/isaac/OneDrive/Área de Trabalho/quartus/tp2/PC_reg/PC_reg.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of PC_reg.vwf called PC_reg.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      48.35 %
+Info: Number of transitions in simulation is 3427
+Info: Vector file PC_reg.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 142 megabytes
+    Info: Processing ended: Sun Nov 12 19:51:51 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

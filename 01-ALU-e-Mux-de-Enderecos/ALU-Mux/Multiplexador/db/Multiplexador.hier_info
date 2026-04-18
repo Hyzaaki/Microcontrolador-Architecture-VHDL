@@ -1,0 +1,37 @@
+|Multiplexador
+rp_in[0] => abus_out.DATAA
+rp_in[1] => abus_out.DATAA
+dir_addr_in[0] => abus_out.DATAA
+dir_addr_in[0] => Equal0.IN6
+dir_addr_in[1] => abus_out.DATAA
+dir_addr_in[1] => Equal0.IN5
+dir_addr_in[2] => abus_out.DATAA
+dir_addr_in[2] => Equal0.IN4
+dir_addr_in[3] => abus_out.DATAA
+dir_addr_in[3] => Equal0.IN3
+dir_addr_in[4] => abus_out.DATAA
+dir_addr_in[4] => Equal0.IN2
+dir_addr_in[5] => abus_out.DATAA
+dir_addr_in[5] => Equal0.IN1
+dir_addr_in[6] => abus_out.DATAA
+dir_addr_in[6] => Equal0.IN0
+irp_in => abus_out.DATAB
+ind_addr_in[0] => abus_out.DATAB
+ind_addr_in[1] => abus_out.DATAB
+ind_addr_in[2] => abus_out.DATAB
+ind_addr_in[3] => abus_out.DATAB
+ind_addr_in[4] => abus_out.DATAB
+ind_addr_in[5] => abus_out.DATAB
+ind_addr_in[6] => abus_out.DATAB
+ind_addr_in[7] => abus_out.DATAB
+abus_out[0] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[1] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[2] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[3] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[4] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[5] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[6] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[7] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+abus_out[8] <= abus_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

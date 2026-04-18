@@ -1,0 +1,84 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity PC_reg is
+    Port ( 
+        clk_in: IN STD_LOGIC;
+		nrst: IN STD_LOGIC;
+		addr_in: IN STD_LOGIC_VECTOR(10 DOWNTO 0); 
+		abus_in: IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+		dbus_in: IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+		inc_pc: IN STD_LOGIC;
+		load_pc: IN STD_LOGIC;
+		wr_en: IN STD_LOGIC;
+		rd_en: IN STD_LOGIC;
+		stack_push: IN STD_LOGIC;
+		stack_pop: IN STD_LOGIC;
+		nextpc_out: OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+		dbus_out: OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+end entity;
+
+ARCHITECTURE arch1 OF PC_reg IS
+BEGIN
+		PROCESS (nrst, clk_in, addr_in, abus_in, dbus_in, inc_pc, load_pc, wr_en, rd_en, stack_push, stack_pop)
+			VARIABLE regPC: STD_LOGIC_VECTOR(12 DOWNTO 0);
+			VARIABLE regPCLATH: STD_LOGIC_VECTOR(7 DOWNTO 0);
+			VARIABLE reg0: STD_LOGIC_VECTOR(12 DOWNTO 0); 
+			VARIABLE reg1: STD_LOGIC_VECTOR(12 DOWNTO 0);
+			VARIABLE reg2: STD_LOGIC_VECTOR(12 DOWNTO 0);
+			VARIABLE reg3: STD_LOGIC_VECTOR(12 DOWNTO 0);
+			VARIABLE reg4: STD_LOGIC_VECTOR(12 DOWNTO 0); 
+			VARIABLE reg5: STD_LOGIC_VECTOR(12 DOWNTO 0);
+			VARIABLE reg6: STD_LOGIC_VECTOR(12 DOWNTO 0);
+			VARIABLE reg7: STD_LOGIC_VECTOR(12 DOWNTO 0);
+		BEGIN
+			IF nrst = '0' THEN
+				regPC := "0000000000000";
+				regPCLATH := "00000000";
+				reg0 := "0000000000000";
+				reg1 := "0000000000000";
+				reg2 := "0000000000000";
+				reg3 := "0000000000000";
+				reg4 := "0000000000000";
+				reg5 := "0000000000000";
+				reg6 := "0000000000000";
+				reg7 := "0000000000000";
+		ELSE
+			IF stack_pop = '1' AND RISING_EDGE(clk_in) THEN
+				reg0 := reg1;
+				reg1 := reg2;
+				reg2 := reg3;
+				reg3 := reg4;
+				reg4 := reg5;
+				reg5 := reg6;
+				reg6 := reg7;
+				reg7 := "0000000000000";
+			
+			ELSIF inc_pc = '1' AND RISING_EDGE(clk_in) THEN regPC := regPC + "0000000000001";
+			ELSIF load_pc = '1' THEN regPC (10 DOWNTO 0) := addr_in;
+				regPC (12 DOWNTO 11) := regPCLATH (4 DOWNTO 3);
+			ELSIF wr_en = '1' AND RISING_EDGE(clk_in) THEN IF abus_in(6 DOWNTO 0) = "0000010" THEN regPC(7 DOWNTO 0) := dbus_in;
+				regPC(12 DOWNTO 8) := regPCLATH (4 DOWNTO 0); 
+			ELSIF abus_in(6 DOWNTO 0) = "0001010" THEN regPCLATH := dbus_in;
+			END IF;
+			END IF;
+			IF stack_push = '1' AND RISING_EDGE (clk_in) THEN
+				reg7 := reg6; 
+				reg6 := reg5;
+				reg5 := reg4;
+				reg4 := reg3;
+				reg3 := reg2;
+				reg2 := reg1;
+				reg1 := reg0;
+				reg0 := regPC;
+			END IF;
+		END IF;
+		IF rd_en = '1' AND abus_in(6 DOWNTO 0) = "0000010" THEN dbus_out <= regPC(7 DOWNTO 0);
+		ELSIF rd_en = '1' AND abus_in (6 DOWNTO 0) = "0001010" THEN dbus_out <= regPCLATH;
+		ELSE dbus_out <= "ZZZZZZZZ";
+		END IF;
+	end process;
+end arch1;

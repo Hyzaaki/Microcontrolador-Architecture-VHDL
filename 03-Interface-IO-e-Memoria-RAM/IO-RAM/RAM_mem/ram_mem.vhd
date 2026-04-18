@@ -1,0 +1,79 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+--use IEEE.STD_LOGIC_ARITH.ALL;
+--use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+entity RAM_mem is
+    Port ( nrst   : in STD_LOGIC;
+           clk_in : in STD_LOGIC;
+           abus_in : in STD_LOGIC_VECTOR(8 downto 0);
+           dbus_in : in STD_LOGIC_VECTOR(7 downto 0);
+           wr_en  : in STD_LOGIC;
+           rd_en  : in STD_LOGIC;
+           dbus_out : out STD_LOGIC_VECTOR(7 downto 0));
+           --addr : STD_LOGIC_VECTOR(4 DOWNTO 0);
+end RAM_mem;
+
+architecture ram of RAM_mem is
+    type memory_array is array (natural range <>) of STD_LOGIC_VECTOR(7 downto 0);
+    signal mem0 : memory_array(32 to 111);
+    signal mem1 : memory_array(160 to 239);
+    signal mem2 : memory_array(288 to 367);
+    signal mem_com : memory_array(112 to 127);
+    SIGNAL abus_int : INTEGER RANGE 0 TO 367;
+
+begin
+    process (nrst, clk_in)
+    begin
+    --conversao
+    abus_int <= TO_INTEGER(UNSIGNED(abus_in));  
+        if nrst = '0' then
+            -- Reset
+            mem0 <= (others => (others => '0'));
+            mem1 <= (others => (others => '0'));
+            mem2 <= (others => (others => '0'));
+            mem_com <= (others => (others => '0'));
+        elsif rising_edge(clk_in) then
+            -- Escrita
+            if wr_en = '1' then
+				case abus_int is 
+					when 32 to 111 =>
+						mem0(abus_int) <= dbus_in;
+					when 160 to 239 => 
+						mem1(abus_int) <= dbus_in;
+					when 288 to 367 =>
+						mem2(abus_int) <= dbus_in;
+					when 112 to 127 =>
+						mem_com(abus_int) <= dbus_in;
+					when others => 
+						
+				end case;
+            end if;
+            -- Leitura
+            if rd_en = '1' then
+                case abus_int is 
+					when 32 to 111 =>
+						dbus_out <= mem0(abus_int);
+					when 160 to 239 => 
+						dbus_out <= mem1(abus_int);
+					when 288 to 367 =>
+						dbus_out <= mem2(abus_int);
+					when 112 to 127 =>
+						dbus_out <= mem_com(abus_int);
+					when others =>				
+				end case;
+            else
+                dbus_out <= (others => 'Z');
+            end if;
+        end if;
+    end process;
+end ram;
+
+
+
+
+
+
+
+

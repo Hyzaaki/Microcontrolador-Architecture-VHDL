@@ -1,0 +1,43 @@
+|W_reg
+clk_in => q_temp[0].CLK
+clk_in => q_temp[1].CLK
+clk_in => q_temp[2].CLK
+clk_in => q_temp[3].CLK
+clk_in => q_temp[4].CLK
+clk_in => q_temp[5].CLK
+clk_in => q_temp[6].CLK
+clk_in => q_temp[7].CLK
+nrst => q_temp~8.OUTPUTSELECT
+nrst => q_temp~9.OUTPUTSELECT
+nrst => q_temp~10.OUTPUTSELECT
+nrst => q_temp~11.OUTPUTSELECT
+nrst => q_temp~12.OUTPUTSELECT
+nrst => q_temp~13.OUTPUTSELECT
+nrst => q_temp~14.OUTPUTSELECT
+nrst => q_temp~15.OUTPUTSELECT
+d_in[0] => q_temp~7.DATAB
+d_in[1] => q_temp~6.DATAB
+d_in[2] => q_temp~5.DATAB
+d_in[3] => q_temp~4.DATAB
+d_in[4] => q_temp~3.DATAB
+d_in[5] => q_temp~2.DATAB
+d_in[6] => q_temp~1.DATAB
+d_in[7] => q_temp~0.DATAB
+wr_en => q_temp~0.OUTPUTSELECT
+wr_en => q_temp~1.OUTPUTSELECT
+wr_en => q_temp~2.OUTPUTSELECT
+wr_en => q_temp~3.OUTPUTSELECT
+wr_en => q_temp~4.OUTPUTSELECT
+wr_en => q_temp~5.OUTPUTSELECT
+wr_en => q_temp~6.OUTPUTSELECT
+wr_en => q_temp~7.OUTPUTSELECT
+q_out[0] <= q_temp[0].DB_MAX_OUTPUT_PORT_TYPE
+q_out[1] <= q_temp[1].DB_MAX_OUTPUT_PORT_TYPE
+q_out[2] <= q_temp[2].DB_MAX_OUTPUT_PORT_TYPE
+q_out[3] <= q_temp[3].DB_MAX_OUTPUT_PORT_TYPE
+q_out[4] <= q_temp[4].DB_MAX_OUTPUT_PORT_TYPE
+q_out[5] <= q_temp[5].DB_MAX_OUTPUT_PORT_TYPE
+q_out[6] <= q_temp[6].DB_MAX_OUTPUT_PORT_TYPE
+q_out[7] <= q_temp[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
